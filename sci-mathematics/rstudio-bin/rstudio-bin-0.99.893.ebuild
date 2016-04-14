@@ -19,6 +19,9 @@ KEYWORDS="~amd64"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+RDEPEND="dev-lang/R
+!sci-mathematics/rstudio"
+
 src_install() {
 	local install_dir="/opt/${MY_PN}"
 	local bin="/usr/bin/${MY_PN}"
