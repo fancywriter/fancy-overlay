@@ -1,12 +1,12 @@
-# pkozlov-overlay
+# fancy-overlay
 My Gentoo overlay
 
-To add this repo to Gentoo just create the ```/etc/portage/repos.conf/pkozlov.conf``` file  with the following content
+To add this repo to Gentoo just create the ```/etc/portage/repos.conf/fancy.conf``` file  with the following content
 
-    [pkozlov]
-    location = /var/db/repos/pkozlov
+    [fancy-overlay]
+    location = /var/db/repos/fancy-overlay
     sync-type = git
-    sync-uri = https://github.com/p-kozlov/pkozlov-overlay.git
+    sync-uri = https://github.com/fancywriter/fancy-overlay.git
     auto-sync = yes
 
 And then type
