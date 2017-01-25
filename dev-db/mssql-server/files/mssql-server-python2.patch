@@ -1,0 +1,36 @@
+diff -Naur a/opt/mssql/lib/mssql-conf/mssqlconfhelper.py b/opt/mssql/lib/mssql-conf/mssqlconfhelper.py
+--- a/opt/mssql/lib/mssql-conf/mssqlconfhelper.py	2017-01-19 23:12:16.000000000 +0200
++++ b/opt/mssql/lib/mssql-conf/mssqlconfhelper.py	2017-01-25 22:43:15.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ # Copyright (c) Microsoft. All rights reserved.
+ 
+ # Helper python script with utility methods
+diff -Naur a/opt/mssql/lib/mssql-conf/mssql-conf.py b/opt/mssql/lib/mssql-conf/mssql-conf.py
+--- a/opt/mssql/lib/mssql-conf/mssql-conf.py	2017-01-19 23:12:16.000000000 +0200
++++ b/opt/mssql/lib/mssql-conf/mssql-conf.py	2017-01-25 22:44:14.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ # Copyright (c) Microsoft. All rights reserved.
+ 
+ # This is the utility to create and modify mssql.conf which contains
+diff -Naur a/opt/mssql/lib/mssql-conf/mssqlsettingsmanager.py b/opt/mssql/lib/mssql-conf/mssqlsettingsmanager.py
+--- a/opt/mssql/lib/mssql-conf/mssqlsettingsmanager.py	2017-01-19 23:12:16.000000000 +0200
++++ b/opt/mssql/lib/mssql-conf/mssqlsettingsmanager.py	2017-01-25 22:43:31.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ # Copyright (c) Microsoft. All rights reserved.
+ 
+ # This file contains the methods to interact with the settings
+diff -Naur a/opt/mssql/lib/mssql-conf/mssqlsettings.py b/opt/mssql/lib/mssql-conf/mssqlsettings.py
+--- a/opt/mssql/lib/mssql-conf/mssqlsettings.py	2017-01-19 23:12:16.000000000 +0200
++++ b/opt/mssql/lib/mssql-conf/mssqlsettings.py	2017-01-25 22:43:23.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python2
+ # Copyright (c) Microsoft. All rights reserved.
+ 
+ # This file contains the the classes for each individual setting
