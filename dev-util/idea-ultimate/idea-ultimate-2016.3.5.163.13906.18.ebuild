@@ -1,12 +1,10 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 inherit eutils versionator
 
 SLOT="0"
-
 PV_STRING="$(get_version_component_range 4-6)"
 MY_PV="$(get_version_component_range 1-3)"
 MY_PN="idea"
@@ -33,8 +31,7 @@ IUSE="-custom-jdk"
 DEPEND="!dev-util/${PN}:14
 	!dev-util/${PN}:15"
 RDEPEND="${DEPEND}
-	>=virtual/jdk-1.8:*"
-
+	>=virtual/jdk-1.7:*"
 S="${WORKDIR}/${MY_PN}-IU-${PV_STRING}"
 
 QA_PREBUILT="opt/${PN}-${MY_PV}/*"
@@ -69,6 +66,12 @@ src_install() {
 	doins -r *
 	fperms 755 "${dir}"/bin/{idea.sh,fsnotifier{,64}}
 
+	if use custom-jdk; then
+		if [[ -d jre ]]; then
+		fperms 755 "${dir}"/jre/jre/bin/{java,jjs,keytool,orbd,pack200,policytool,rmid,rmiregistry,servertool,tnameserv,unpack200}
+		fi
+	fi
+
 	make_wrapper "${PN}" "${dir}/bin/${MY_PN}.sh"
 	newicon "bin/${MY_PN}.png" "${PN}.png"
 	make_desktop_entry "${PN}" "IntelliJ Idea Ultimate" "${PN}" "Development;IDE;"
@@ -77,4 +80,3 @@ src_install() {
 	mkdir -p "${D}/etc/sysctl.d/" || die
 	echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-idea-inotify-watches.conf" || die
 }
-
