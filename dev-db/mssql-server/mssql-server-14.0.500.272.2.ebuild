@@ -20,7 +20,7 @@ IUSE=""
 DEPEND="dev-libs/jemalloc sys-libs/libcxx sys-process/numactl"
 RDEPEND="${DEPEND}"
 
-PATCHES=("$FILESDIR/$PN-python2.patch")
+PATCHES=("$FILESDIR/$PN-$PV-python2.patch")
 
 src_install() {
   cp -R * "$D"
