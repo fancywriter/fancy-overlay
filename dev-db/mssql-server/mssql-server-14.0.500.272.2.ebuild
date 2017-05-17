@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-libs/jemalloc sys-libs/libcxx sys-process/numactl"
+DEPEND="dev-libs/jemalloc sys-libs/libcxx sys-process/numactl virtual/krb5 sys-auth/sssd"
 RDEPEND="${DEPEND}"
 
 PATCHES=("$FILESDIR/$PN-$PV-python2.patch")
