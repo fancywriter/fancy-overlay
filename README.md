@@ -1,7 +1,7 @@
 # fancy-overlay
 My Gentoo overlay
 
-To add this repo to Gentoo just create the ```/etc/portage/repos.conf/fancy.conf``` file  with the following content
+To add this repo to Gentoo just create a configuration file ```/etc/portage/repos.conf/fancy.conf```  with the following content
 
     [fancy-overlay]
     location = /var/db/repos/fancy-overlay
