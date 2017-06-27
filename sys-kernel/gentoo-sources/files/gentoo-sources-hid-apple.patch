@@ -1,5 +1,5 @@
---- a/drivers/hid/hid-apple.c	2016-08-05 18:41:21.795017209 +0300
-+++ b/drivers/hid/hid-apple.c	2016-06-14 10:48:39.243600137 +0300
+--- a/drivers/hid/hid-apple.c
++++ b/drivers/hid/hid-apple.c
 @@ -52,6 +52,22 @@
  		"(For people who want to keep Windows PC keyboard muscle memory. "
  		"[0] = as-is, Mac layout. 1 = swapped, Windows layout.)");

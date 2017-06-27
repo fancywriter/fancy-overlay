@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI="6"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="18"
+K_GENPATCHES_VER="35"
 
 inherit kernel-2
 detect_version
@@ -19,8 +19,8 @@ DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
 
 src_prepare() {
+	default
 	epatch "$FILESDIR/$PN-hid-apple.patch"
-	epatch "$FILESDIR/$PN-poweroff-apple.patch"
 }
 
 pkg_postinst() {
@@ -32,4 +32,3 @@ pkg_postinst() {
 pkg_postrm() {
 	kernel-2_pkg_postrm
 }
-
