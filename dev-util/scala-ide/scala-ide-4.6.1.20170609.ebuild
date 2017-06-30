@@ -22,12 +22,7 @@ KEYWORDS="~amd64"
 SLOT="0"
 LICENSE="BSD"
 
-RDEPEND=">=virtual/jdk-1.8
-	|| (
-		dev-lang/scala
-		dev-lang/scala-bin
-	)
-"
+RDEPEND=">=virtual/jdk-1.8"
 
 MY_D="/opt"
 
