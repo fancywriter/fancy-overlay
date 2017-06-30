@@ -2,15 +2,18 @@
 # Distributed under the terms of the GNU General Public License v2
 EAPI=5
 
-inherit java-pkg-opt-2
+inherit java-pkg-opt-2 versionator
 
 # scala-ide -> scalaide
 S_PACK="${PN/-/}-pack"
 
-# scala-ide -> scala-SDK-${PV}
-S_SDK="${PN%-*}-SDK-${PV}"
+PV1="$(get_version_component_range 1-3)"
+PV2="$(get_version_component_range 4)"
 
-SRC_URI="http://downloads.typesafe.com/${S_PACK}/${PV}-vfinal-neon-212-20170516/${S_SDK}-vfinal-2.12-linux.gtk.x86_64.tar.gz"
+# scala-ide -> scala-SDK-${PV1}
+S_SDK="${PN%-*}-SDK-${PV1}"
+
+SRC_URI="http://downloads.typesafe.com/${S_PACK}/${PV1}-vfinal-neon-212-${PV2}/${S_SDK}-vfinal-2.12-linux.gtk.x86_64.tar.gz"
 
 DESCRIPTION="The Scala IDE"
 HOMEPAGE="http://www.scala-ide.org"
