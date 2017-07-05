@@ -14,7 +14,7 @@ S="$WORKDIR"
 
 LICENSE="Microsoft EULA"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND="dev-libs/jemalloc sys-libs/libcxx sys-process/numactl virtual/krb5 sys-auth/sssd"
