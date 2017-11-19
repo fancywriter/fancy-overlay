@@ -64,11 +64,11 @@ src_compile() {
 
 src_install() {
 	DOCS="ChangeLog.txt README" cmake-utils_src_install
-	rm -f "${D}"/usr/share/games/hedgewars/Data/Fonts/{DejaVuSans-Bold.ttf,wqy-zenhei.ttc}
-	dosym /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf \
-		"${GAMES_DATADIR}"/hedgewars/Data/Fonts/DejaVuSans-Bold.ttf
-	dosym /usr/share/fonts/wqy-zenhei/wqy-zenhei.ttc \
-		"${GAMES_DATADIR}"/hedgewars/Data/Fonts/wqy-zenhei.ttc
+	#rm -f "${D}"/usr/share/games/hedgewars/Data/Fonts/{DejaVuSans-Bold.ttf,wqy-zenhei.ttc}
+	#dosym /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf \
+	#	"${GAMES_DATADIR}"/hedgewars/Data/Fonts/DejaVuSans-Bold.ttf
+	#dosym /usr/share/fonts/wqy-zenhei/wqy-zenhei.ttc \
+#		"${GAMES_DATADIR}"/hedgewars/Data/Fonts/wqy-zenhei.ttc
 	doicon misc/hedgewars.png
 	make_desktop_entry ${PN} Hedgewars
 	doman man/${PN}.6
