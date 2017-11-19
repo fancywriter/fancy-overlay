@@ -45,6 +45,7 @@ S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local mycmakeargs=(
+	    -DCMAKE_BUILD_TYPE=Debug
 		-DMINIMAL_FLAGS=ON
 		-DCMAKE_INSTALL_PREFIX="/usr"
 		-DDATA_INSTALL_DIR="${GAMES_DATADIR}/${PN}"
