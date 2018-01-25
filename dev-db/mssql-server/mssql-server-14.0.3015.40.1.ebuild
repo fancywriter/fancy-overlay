@@ -9,7 +9,7 @@ inherit versionator unpacker
 DESCRIPTION="Microsoft SQL Server"
 HOMEPAGE="https://www.microsoft.com/en-us/sql-server"
 MY_PV="$(replace_version_separator 4 '-')"
-SRC_URI="https://packages.microsoft.com/ubuntu/16.04/$PN/pool/main/m/$PN/${PN}_${MY_PV}_amd64.deb"
+SRC_URI="https://packages.microsoft.com/ubuntu/16.04/$PN-2017/pool/main/m/$PN/${PN}_${MY_PV}_amd64.deb"
 S="$WORKDIR"
 
 LICENSE="Microsoft EULA"
