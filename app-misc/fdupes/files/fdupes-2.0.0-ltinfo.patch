@@ -1,0 +1,11 @@
+diff --git a/Makefile.am b/Makefile.am
+index ecb5087..c96eb06 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -70,3 +70,6 @@ EXTRA_DIST = testdir CHANGES CONTRIBUTORS
+ 
+ dist-hook:
+ 	if [ -f $(top_srcdir)/INSTALL.enduser ]; then chmod u+w $(distdir)/INSTALL; \cp -f $(top_srcdir)/INSTALL.enduser $(distdir)/INSTALL; fi
++
++AM_LDFLAGS = -ltinfo
++
