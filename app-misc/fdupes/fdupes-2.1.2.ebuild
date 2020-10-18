@@ -7,7 +7,7 @@ inherit eutils flag-o-matic toolchain-funcs autotools
 
 DESCRIPTION="Identify/delete duplicate files residing within specified directories"
 HOMEPAGE="https://github.com/adrianlopezroche/fdupes"
-SRC_URI="https://github.com/adrianlopezroche/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/adrianlopezroche/${PN}/releases/download/v${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
