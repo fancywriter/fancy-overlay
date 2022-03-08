@@ -17,5 +17,6 @@ S=${WORKDIR}
 
 src_install() {
 	cp -R * "$D"
+	dosym /opt/${PN}/${PN} /opt/bin/${PN}
 }
 
