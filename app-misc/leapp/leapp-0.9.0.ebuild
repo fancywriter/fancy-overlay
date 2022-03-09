@@ -17,6 +17,6 @@ S=${WORKDIR}
 
 src_install() {
 	cp -R * "$D"
-	dosym /opt/${PN}/${PN} /opt/bin/${PN}
+	dosym /opt/Leapp/${PN} /opt/bin/${PN}
 }
 
