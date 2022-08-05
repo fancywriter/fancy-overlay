@@ -29,9 +29,6 @@ net-dns/libidn2
 RDEPEND="firejail? ( >=sys-apps/firejail-0.9.50 )"
 
 src_prepare() {
-	PATCHES=(
-		"${FILESDIR}/${PN}-add-startup-script.patch"
-	)
 	if use firejail; then
 		eapply "${FILESDIR}/${PN}-firejail.patch"
 	fi
@@ -54,6 +51,7 @@ src_install() {
 	if use firejail; then
 		make_desktop_entry "firejail --profile=/opt/${PN}/ebuild_assets/firejail/${PN}.profile /opt/${PN}/${PN}" "[FJ] Teams for Linux" teams-for-linux
 	fi
+	dosym /opt/${PN}/${PN} /opt/bin/${PN}
 }
 
 pkg_postinst() {
