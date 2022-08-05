@@ -46,7 +46,6 @@ src_install() {
 	done
 	doicon "${FILESDIR}/icons/teams-for-linux.png"
 
-	dobin ebuild_assets/${PN}
 	make_desktop_entry /opt/${PN}/${PN} "Teams for Linux" teams-for-linux
 	if use firejail; then
 		make_desktop_entry "firejail --profile=/opt/${PN}/ebuild_assets/firejail/${PN}.profile /opt/${PN}/${PN}" "[FJ] Teams for Linux" teams-for-linux
