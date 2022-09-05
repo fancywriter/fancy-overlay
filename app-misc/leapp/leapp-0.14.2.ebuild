@@ -16,6 +16,7 @@ IUSE=""
 S=${WORKDIR}
 
 src_install() {
+	rm -rf usr/share/doc
 	cp -R * "$D"
 	dosym /opt/Leapp/${PN} /opt/bin/${PN}
 }
