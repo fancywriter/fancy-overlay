@@ -26,10 +26,7 @@ for res in 16 32 48 64 128 256 512 1024; do
     newicon -s ${res} usr/share/icons/hicolor/${res}x${res}/apps/bluejeans-v2.png ${PN}.png
 done
 
-dosym /opt/${PN}/${PN} /opt/bin/${PN}
-dosym /opt/${PN}/${PN}-bin /opt/bin/${PN}-bin
-dosym /usr/lib/libudev.so /opt/${PN}/libudev.so.0
-
+dosym /opt/${PN}/bluejeans-v2 /opt/bin/${PN}
 domenu usr/share/applications/bluejeans-v2.desktop
 }
 
