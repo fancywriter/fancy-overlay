@@ -11,7 +11,7 @@ HOMEPAGE="https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 # This is distributed as part of the "bundle driver"; since we already have the
 # opensource part separately we just install the nonfree part here.
 
-ISCAN_VERSION="6.7.0.0"
+ISCAN_VERSION="6.7.61.0"
 
 SRC_URI="https://download2.ebz.epson.net/epsonscan2/common/rpm/x64/epsonscan2-bundle-${ISCAN_VERSION}.x86_64.rpm.tar.gz"
 LICENSE="Copyright SEIKO EPSON CORPORATION"
