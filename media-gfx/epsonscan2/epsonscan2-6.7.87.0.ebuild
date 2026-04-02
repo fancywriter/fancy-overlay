@@ -46,6 +46,10 @@ src_prepare() {
 		-e '/thirdparty\/zlib/d' \
 		-e 's|^\([[:blank:]]*\)\(usb-1.0\)|\1\2\n\1hpdf\n\1z|' \
 		src/Controller/CMakeLists.txt || die
+	find . -name "CMakeLists.txt" -exec \
+		sed -i 's/-DBOOST_NO_CXX11_RVALUE_REFERENCES=1//g' {} +
+	sed -i 's/: m_func(rhs\.func)/: m_func(rhs.m_func)/' \
+		src/ES2Command/Src/Utils/ESAccessor.h
 }
 
 src_install() {
