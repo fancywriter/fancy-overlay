@@ -1,30 +1,21 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-
 EAPI=8
-
 inherit rpm
-
 DESCRIPTION="Scanning plugin for EPSON scanners (nonfree)"
-
 HOMEPAGE="https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
-# This is distributed as part of the "bundle driver"; since we already have the
-# opensource part separately we just install the nonfree part here.
-
-ISCAN_VERSION="6.7.61.0"
-
-SRC_URI="https://download2.ebz.epson.net/epsonscan2/common/rpm/x64/epsonscan2-bundle-${ISCAN_VERSION}.x86_64.rpm.tar.gz"
+PLUGIN_VERSION="1.0.0.6"
 LICENSE="Copyright SEIKO EPSON CORPORATION"
 SLOT="0"
 KEYWORDS="~amd64"
-
 RDEPEND="media-gfx/epsonscan2"
-RESTRICT="bindist mirror strip"
+RESTRICT="bindist mirror strip fetch"
+SRC_URI="epsonscan2-bundle-${PV}_23.x86_64.rpm.tar.gz"
 S=${WORKDIR}
 
 src_unpack() {
 	default
-	rpm_unpack ./epsonscan2-bundle-${ISCAN_VERSION}.x86_64.rpm/plugins/${P}-1.x86_64.rpm
+	rpm_unpack ./epsonscan2-bundle-${PV}23.x86_64.rpm/plugins/$PN-$PLUGIN_VERSION-1.x86_64.rpm
 }
 
 src_install() {
@@ -41,5 +32,5 @@ src_install() {
 	doins -r usr/share/epsonscan2-ocr
 	exeinto usr/libexec/epsonscan2-ocr
 	doexe usr/libexec/epsonscan2-ocr/ocr-engine-getrotate
-	dodoc usr/share/doc/${P}-1/*
+	dodoc usr/share/doc/$PN-$PLUGIN_VERSION-1/*
 }
