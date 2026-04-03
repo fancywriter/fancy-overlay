@@ -1,0 +1,11 @@
+diff '--color=auto' -u a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2026-04-03 22:45:12.770825240 +0100
++++ b/CMakeLists.txt	2026-04-03 22:45:40.588387938 +0100
+@@ -88,6 +88,7 @@
+ 
+ #_cmake_modify_IGNORE SET (CMAKE_INSTALL_PREFIX /usr)
+ set(EPSON_INSTALL_PATH ${CMAKE_INSTALL_FULL_LIBDIR}/epsonscan2/)
++set(EPSON_OCR_INSTALL_PATH ${CMAKE_INSTALL_FULL_LIBDIR}/epsonscan2-ocr/)
+ set(COMMON_SHARE_PATH ${CMAKE_INSTALL_FULL_DATAROOTDIR})
+ 
+ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY /tmp/build)
